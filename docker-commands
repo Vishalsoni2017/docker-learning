@@ -1,0 +1,20 @@
+docker info
+docker ps 
+docker ps -a
+docker images ls
+docker container ls
+docker pull image_naem
+docker rmi image_name/image_id 
+docker run iamge_name
+docker login -> push or pull images private
+docker pause id // container pause
+docker unpause id //container unpause
+docker restart id 
+docker stop id
+docker kill id
+docker run ubuntu shell_cmds(bash shell) like whoami hostname
+docker run -it ubuntu bash //interactive run
+docker attach id 
+docker stats id / blank
+docker inspect id
+

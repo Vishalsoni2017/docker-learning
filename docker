@@ -19,5 +19,46 @@ if app stops deleted container will also stops.
 
 Installation -- install-docker.sh
 
+docker 
+    opensource , isolated container creatation , c loosely isolated loosely couple
 
 
+### Docker Architecture
+docker host -> ubuntu - ec2 instance
+
+Docker architecture is based on a client-server model. It consists of the following components:
+
+1. **Docker Client**: The *interface through which users interact with Docker*. Commands like `docker run` are sent from the client to the Docker daemon.
+
+2. **Docker Daemon (dockerd)**: The *core service that manages Docker objects* such as images, containers, networks, and volumes. It listens for API requests and performs the requested actions.
+
+3. **Docker Images**: *Read-only templates* used to create containers. They contain the application code, dependencies, and runtime environment.
+
+4. **Docker Containers**: *Lightweight, portable, and isolated environments* created from Docker images. They run the application and its dependencies.
+
+5. **Docker Registry**: A storage and distribution system for Docker images. Public registries like Docker Hub or private registries can be used to store and share images.
+
+6. **Docker Engine**: The *runtime* that enables containerization. It includes the Docker Daemon, REST API, and CLI tools.
+
+In simple terms, Docker allows you to package applications and their dependencies into containers, ensuring consistency across different environments.
+
+
+path 
+
+/var/lib/docker -> all files path volume, network, images
+
+user
+
+usermod -aG docker $USER / ubuntu
+newgrp docker
+
+
+Lifecycle
+
+create -> running -> kill
+                -> stop
+                -> pause
+
+exist
+CTL+P+Q exit without close
+CTL d to close
