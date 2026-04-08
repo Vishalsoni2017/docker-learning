@@ -1,0 +1,23 @@
+docker
+
+tradational arch vs virtulzation
+
+tradational arch -> hardware -> os -> applications 
+virtualaztion -> hardware -> virutal layer (hyperisor) -> VM (os + appilcation)
+
+hypervisor 
+    type 1 bare metal- h/w -> hypervisor -> vm (os+appilcation) e.g cloud platform 
+    type 2 Hosted -  h/w -> host os -> hypervisor -> vm (guest os+ applcication) e.g vmware
+
+Containerization 
+is a lightweight virtualization method where applications run in isolated environments called containers, sharing the host OS kernel while maintaining their own dependencies and configurations.
+
+h/w -> hosted os ->container enginer (docker engine) -> container (lightweight os + app+ library)
+
+if app stops deleted container will also stops.
+-> give resource to h/w ->bootup time low
+
+Installation -- install-docker.sh
+
+
+
