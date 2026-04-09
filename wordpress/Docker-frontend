@@ -1,0 +1,12 @@
+FROM nginx
+WORKDIR /tmp
+RUN rm -rf /usr/share/nginx/html*
+ADD latest.zip .
+RUN apt update -y && apt install unzip && apt install php-fpm -y && apt install php8.4-mysql -y
+RUN sed -i 's|listen = /run/php/php8.4-fpm.sock|listen = 127.0.0.1:9000|' /etc/php/8.4/fpm/pool.d/www.conf
+RUN echo "extension=mysql" >> /etc/php/8.4/php.ini
+RUN service php8.4-fpm start
+RUN unzip latest.zip -d /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/
+EXPOSE 80
+CMD ["sh", "-c", "service php8.4-fpm start && nginx -g 'daemon off;'"]

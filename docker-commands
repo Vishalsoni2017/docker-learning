@@ -14,7 +14,21 @@ docker stop id
 docker kill id
 docker run ubuntu shell_cmds(bash shell) like whoami hostname
 docker run -it ubuntu bash //interactive run
-docker attach id 
+docker attach id // attach to last cmd and entrypoint
 docker stats id / blank
 docker inspect id
-
+docker run -d centos ping localhost
+docker logs -f id
+docker system prune -a -f
+docker exec -it c_id bash /login to new termial
+docker rename c_id vishal
+docker run -itd --name vishal ubuntu bash
+docker commit c_id image_name:version
+docker push username/iamge_name:version
+docker run --itd -p 80:80 nginx 
+docker cp file c_id:/path
+docker volume ls
+docker volume create vol_name
+docker run -itd -v vol_name:/path --name test ubuntu
+docker volume rm vol_name
+docker build -t name_image .

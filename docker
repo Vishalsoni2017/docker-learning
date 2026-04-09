@@ -62,3 +62,36 @@ create -> running -> kill
 exist
 CTL+P+Q exit without close
 CTL d to close
+
+OWN Image
+1.Base Image - docker commit c_id image_name:version 
+2. Dokcerfile
+
+Docker file
+
+FROM -> base image used 
+RUN -> cmd to exec at crating image
+MAINTAINER -> author , descr
+COPY -> copy from host to images
+ADD -> extact tar to images
+EXPOSE -> port to expose
+WORKDIR -> wokring dir
+ENV -> set envir varible
+CMD -> cmd will run in container when create or runing , can overwritten
+ENTRYPOINT -> same cmd but has high prioirty , can overrwrite
+ARG	->Use build-time variables.
+HEALTHCHECK	->Check a container's health on startup.
+LABEL	->Add metadata to an image.
+ONBUILD	->Specify instructions for when the image is used in a build.
+SHELL	->Set the default shell of an image.
+STOPSIGNAL	->Specify the system call signal for exiting a container.
+USER	->Set user and group ID.
+VOLUME	->Create volume mounts.
+
+Build Layer by Layer to avoid building images from stratch for new images by using caches
+
+
+can create .dockerignore like git
+use USER to avoid root 
+
+
