@@ -1,0 +1,23 @@
+services:
+  frontend:
+    container_name: front
+    image: 'wd:1.0'
+    ports:
+      - '80:80'
+    networks:
+      - wd
+
+  backend:
+    container_name: back
+    image: 'mysql:latest'
+    ports:
+      - '3306:3306'
+    networks:
+      - wd
+    environment:
+      - MYSQL_ROOT_PASSWORD=my-secret-pw
+      - MYSQL_DATABASE=wd
+
+networks:
+  wd:
+    driver: bridge

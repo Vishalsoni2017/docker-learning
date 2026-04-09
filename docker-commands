@@ -32,3 +32,14 @@ docker volume create vol_name
 docker run -itd -v vol_name:/path --name test ubuntu
 docker volume rm vol_name
 docker build -t name_image .
+
+docker network ls
+docker network create net_name
+docker network rm net_name
+docker netework connect net_name c_id
+docker network disconnect net_name c_id
+docker network inspect net_name
+docker network prune -f
+
+docker run -itd --name web --network net_name nginx
+

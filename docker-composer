@@ -1,0 +1,17 @@
+version: '3'
+services:
+    container1:
+
+    container2:
+
+
+-----------------------
+docker-compose.yml
+docker compose up
+docker compose down
+docker compose -f other_name.yml up
+docker compose -d
+docker compose ps // list of running container
+docker compose logs // -f follow logs   
+
+

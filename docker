@@ -89,9 +89,37 @@ USER	->Set user and group ID.
 VOLUME	->Create volume mounts.
 
 Build Layer by Layer to avoid building images from stratch for new images by using caches
+container by container , stack up , intermedicate cotnainer remove
 
 
 can create .dockerignore like git
 use USER to avoid root 
+
+shell format
+CMD ping localhost
+
+exec format
+CMD ["ping"',"localhost"]
+
+docker-compose
+container , network, volumne as single service
+scaling
+
+docker Network
+
+by default all container loosely coupled connect through network
+
+types
+
+bridge - default bride network , create customer network -> full control 
+host - share by network
+none  - no network 
+overlay
+
+default bride -> communication using IP
+custom -> can commuincate with name
+
+
+
 
 
