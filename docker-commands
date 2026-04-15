@@ -38,6 +38,12 @@ docker network create net_name
 docker network rm net_name
 docker netework connect net_name c_id
 docker network disconnect net_name c_id
+
+docker save mlopsimage:latest -o mlopsimage.tar
+ctr -n k8s.io images import mlopsimage.tar
+crictl images // import images to k8 cluster
+
+
 docker network inspect net_name
 docker network prune -f
 
